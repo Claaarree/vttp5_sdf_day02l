@@ -6,8 +6,21 @@ import java.util.List;
 import Object.Computer;
 import Object.Desktop;
 import Object.Laptop;
+import Vehicle.Car;
+import Vehicle.Truck;
+import Vehicle.Vehicle;
 
 public class App {
+
+    public static void whatIsMyType(Object obj) {
+        if (obj instanceof Car) {
+            System.out.println("This is a car");
+        } else if (obj instanceof Truck) {
+            System.out.println("This is a Truck");
+        } else System.out.println("This is a vehicle");
+    }
+
+
     public static void main(String[] args){
         Computer computer1 = new Computer("5GHz 8 core", "Asus 8000", 32, 2024);
         computer1.startUp();
@@ -67,6 +80,19 @@ public class App {
         for (Computer computer :machines) {
             System.out.println(computer);
         }
+
+
+        
+
+        List<Vehicle> vehicles = new ArrayList<>();
+        vehicles.add(new Vehicle("1 Series", "BMW", 2013));
+        vehicles.add(new Car("100", "Audi", 1994, "Sedan", 5));
+        vehicles.add(new Truck("Chavdar M65", "Chavdar", 2000, 6000.00));
+
+        for (Vehicle v : vehicles) {
+            whatIsMyType(v);
+        }
+           
 
         }
 }
