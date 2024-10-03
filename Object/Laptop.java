@@ -61,6 +61,20 @@ public class Laptop extends Computer{
         System.out.println("Latop is now shutting down...");
     }
 
+
+    public Integer computerArithmetic() {
+
+        Integer a = 1;
+        Integer b = 2;
+        Integer sum = a + b;
+        return sum;
+    }
+
+    public Integer computerArithmetic (int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+
     @Override
     public void displaySpecs() {
         System.out.println("Below are the specs of this laptop");
